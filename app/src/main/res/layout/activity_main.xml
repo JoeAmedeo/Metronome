@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.joe.metronome.MainActivity">
+
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <Button
+        android:id="@+id/buttonTempoUp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editTextTempo"
+        android:layout_toEndOf="@+id/editTextTempo"
+        android:layout_toRightOf="@+id/editTextTempo"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/buttonTempoDown"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_alignTop="@+id/editTextTempo"
+        android:layout_toLeftOf="@+id/editTextTempo"
+        android:layout_toStartOf="@+id/editTextTempo" />
+
+    <EditText
+        android:id="@+id/editTextTempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number"
+        android:imeOptions="actionDone"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxClicks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clicks"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCounting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Counting"
+        android:layout_below="@+id/checkBoxClicks"
+        android:layout_alignLeft="@+id/checkBoxClicks"
+        android:layout_alignStart="@+id/checkBoxClicks" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBeeps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxCounting"
+        android:layout_alignStart="@+id/checkBoxCounting"
+        android:layout_below="@+id/checkBoxCounting"
+        android:text="Beeps" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSnare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBoxBeeps"
+        android:layout_alignStart="@+id/checkBoxBeeps"
+        android:layout_below="@+id/checkBoxBeeps"
+        android:text="Snare" />
+
+    <TextView
+        android:id="@+id/textViewTempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextTempo"
+        android:layout_centerHorizontal="true"
+        android:text="Beats per Minute" />
+
+    <Spinner
+        android:id="@+id/spinnerTimeSig1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textViewTempo"
+        android:layout_alignStart="@+id/textViewTempo"
+        android:layout_below="@+id/buttonTempoDown"
+        android:layout_marginTop="64dp" />
+
+    <Spinner
+        android:id="@+id/spinnerTimeSig2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/checkBoxCounting"
+        android:layout_alignRight="@+id/checkBoxCounting"
+        android:layout_alignTop="@+id/spinnerTimeSig1" />
+</RelativeLayout>
